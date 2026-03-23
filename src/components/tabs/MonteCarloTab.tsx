@@ -137,7 +137,7 @@ export default function MonteCarloTab() {
           max={30}
           step={1}
           value={[selectedMonteCarloYear]}
-          onValueChange={([v]) => setSelectedMonteCarloYear(v)}
+          onValueChange={(val) => setSelectedMonteCarloYear(Array.isArray(val) ? val[0] : val)}
         />
         <div className="mt-2 flex justify-between text-[10px]" style={{ color: COLORS.textMuted }}>
           <span>Year 1</span>

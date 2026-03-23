@@ -87,12 +87,10 @@ function computeProgressiveTax(taxableIncome: number, brackets: TaxBracket[]): n
 function getMarginalBracketRate(taxableIncome: number, brackets: TaxBracket[]): number {
   if (taxableIncome <= 0) return 0;
 
-  let previousBound = 0;
   for (const bracket of brackets) {
     if (taxableIncome <= bracket.upperBound) {
       return bracket.rate;
     }
-    previousBound = bracket.upperBound;
   }
 
   // Above all brackets — return the highest rate

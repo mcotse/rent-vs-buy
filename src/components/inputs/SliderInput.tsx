@@ -37,7 +37,7 @@ export function SliderInput({
   onChange,
 }: SliderInputProps) {
   const handleChange = useCallback(
-    (newValue: number | number[]) => {
+    (newValue: number | readonly number[]) => {
       const v = Array.isArray(newValue) ? newValue[0] : newValue;
       onChange(v);
     },

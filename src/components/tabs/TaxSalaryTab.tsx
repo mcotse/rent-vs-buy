@@ -32,8 +32,6 @@ export default function TaxSalaryTab() {
 
     // Year 1 data for MID and property tax deduction
     const year1Months = simulationResult.monthly.slice(0, 12);
-    const annualTaxSavings = year1Months.reduce((sum, m) => sum + m.taxSavings, 0);
-
     // Approximate split: MID is typically ~80% of deduction savings in year 1
     const year1InterestTotal = year1Months.reduce((sum, m) => sum + m.interestPortion, 0);
     const year1PropertyTaxTotal = year1Months.reduce((sum, m) => sum + m.propertyTax, 0);

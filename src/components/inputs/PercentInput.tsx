@@ -20,7 +20,7 @@ export function PercentInput({
   onChange,
 }: PercentInputProps) {
   const handleChange = useCallback(
-    (newValue: number | number[]) => {
+    (newValue: number | readonly number[]) => {
       const v = Array.isArray(newValue) ? newValue[0] : newValue;
       onChange(v);
     },

@@ -21,7 +21,7 @@ interface CostRow {
 }
 
 export default function CostDetailTab() {
-  const { simulationResult, params } = useCalculatorStore();
+  const { simulationResult } = useCalculatorStore();
   const [selectedYear, setSelectedYear] = useState(1);
 
   const costBreakdown = useMemo(() => {

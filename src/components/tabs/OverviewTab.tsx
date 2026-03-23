@@ -18,7 +18,7 @@ const cardStyle = {
 };
 
 function SnapshotCard({ year, label }: { year: number; label: string }) {
-  const { simulationResult, params } = useCalculatorStore();
+  const { simulationResult } = useCalculatorStore();
 
   const snapshot = useMemo(() => {
     if (!simulationResult) return null;

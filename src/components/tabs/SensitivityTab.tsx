@@ -137,7 +137,8 @@ export default function SensitivityTab() {
   }, [params, sensitivityRowVar, sensitivityColVar, rowValues, colValues]);
 
   const handleRowVarChange = useCallback(
-    (v: string) => {
+    (v: string | null) => {
+      if (!v) return;
       const newRow = v as SensitivityVariable;
       if (newRow === sensitivityColVar) return; // Prevent same variable
       startTransition(() => {
@@ -148,7 +149,8 @@ export default function SensitivityTab() {
   );
 
   const handleColVarChange = useCallback(
-    (v: string) => {
+    (v: string | null) => {
+      if (!v) return;
       const newCol = v as SensitivityVariable;
       if (newCol === sensitivityRowVar) return;
       startTransition(() => {

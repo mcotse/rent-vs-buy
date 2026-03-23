@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { useCalculatorStore } from '@/store/calculator-store';
 import { FIXED_CONSTANTS } from '@/engine/defaults';
 import { computeEarlyExits } from '@/engine/simulation';
-import type { EarlyExitResult } from '@/engine/types';
 import { COLORS } from '@/lib/colors';
 import { formatCurrency, formatCurrencyShort } from '@/lib/format';
 import MetricCard from '@/components/shared/MetricCard';

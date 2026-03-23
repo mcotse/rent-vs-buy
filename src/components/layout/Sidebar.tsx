@@ -3,8 +3,6 @@ import { PARAM_RANGES, FIXED_CONSTANTS } from '@/engine/defaults';
 import { ParameterGroup } from '@/components/inputs/ParameterGroup';
 import { SliderInput } from '@/components/inputs/SliderInput';
 import { PercentInput } from '@/components/inputs/PercentInput';
-import { CurrencyInput } from '@/components/inputs/CurrencyInput';
-import { ToggleInput } from '@/components/inputs/ToggleInput';
 import { RefinanceInput } from '@/components/inputs/RefinanceInput';
 import { RealNominalToggle } from '@/components/shared/RealNominalToggle';
 import {
