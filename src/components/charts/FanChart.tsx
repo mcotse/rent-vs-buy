@@ -164,11 +164,13 @@ export default function FanChart({ yearStats }: FanChartProps) {
           align="right"
           verticalAlign="top"
           wrapperStyle={{ fontSize: 11, paddingBottom: 8 }}
-          payload={[
-            { value: 'P10-P90 range', type: 'rect' as const, color: COLORS.mc90 },
-            { value: 'P25-P75 range', type: 'rect' as const, color: COLORS.mc75 },
-            { value: 'Median (P50)', type: 'line' as const, color: COLORS.mc50 },
-          ]}
+          {...{
+            payload: [
+              { value: 'P10-P90 range', type: 'rect', color: COLORS.mc90 },
+              { value: 'P25-P75 range', type: 'rect', color: COLORS.mc75 },
+              { value: 'Median (P50)', type: 'line', color: COLORS.mc50 },
+            ],
+          }}
           formatter={(value: string) => (
             <span style={{ color: COLORS.textSecondary }}>{value}</span>
           )}
